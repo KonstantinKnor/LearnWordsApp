@@ -42,7 +42,7 @@ extension ViewController:UISearchBarDelegate {
             print("Error creating the data object from data")
         }
         request.httpMethod = "POST"
-        
+        print("hello")
         
         let session = URLSession.shared
         var text :String?
