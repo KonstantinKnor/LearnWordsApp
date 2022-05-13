@@ -13,7 +13,20 @@
 		D905CA47281AB57E00F79161 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D905CA45281AB57E00F79161 /* Main.storyboard */; };
 		D905CA49281AB58000F79161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D905CA48281AB58000F79161 /* Assets.xcassets */; };
 		D905CA4C281AB58000F79161 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D905CA4A281AB58000F79161 /* LaunchScreen.storyboard */; };
+		D9577DCB282E5977003E8212 /* LearnWordsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9577DCA282E5977003E8212 /* LearnWordsAppUITests.swift */; };
+		D9577DCD282E5977003E8212 /* LearnWordsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9577DCC282E5977003E8212 /* LearnWordsAppUITestsLaunchTests.swift */; };
+		D9577DD4282EA28F003E8212 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9577DD3282EA28E003E8212 /* Language.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9577DCE282E5977003E8212 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D905CA34281AB57E00F79161 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D905CA3B281AB57E00F79161;
+			remoteInfo = LearnWordsApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D905CA3C281AB57E00F79161 /* LearnWordsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnWordsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +37,21 @@
 		D905CA48281AB58000F79161 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D905CA4B281AB58000F79161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D905CA4D281AB58000F79161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9577DC8282E5977003E8212 /* LearnWordsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnWordsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9577DCA282E5977003E8212 /* LearnWordsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnWordsAppUITests.swift; sourceTree = "<group>"; };
+		D9577DCC282E5977003E8212 /* LearnWordsAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnWordsAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D9577DD3282EA28E003E8212 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D905CA39281AB57E00F79161 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9577DC5282E5977003E8212 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				D905CA3E281AB57E00F79161 /* LearnWordsApp */,
+				D9577DC9282E5977003E8212 /* LearnWordsAppUITests */,
 				D905CA3D281AB57E00F79161 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				D905CA3C281AB57E00F79161 /* LearnWordsApp.app */,
+				D9577DC8282E5977003E8212 /* LearnWordsAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,8 +89,18 @@
 				D905CA48281AB58000F79161 /* Assets.xcassets */,
 				D905CA4A281AB58000F79161 /* LaunchScreen.storyboard */,
 				D905CA4D281AB58000F79161 /* Info.plist */,
+				D9577DD3282EA28E003E8212 /* Language.swift */,
 			);
 			path = LearnWordsApp;
+			sourceTree = "<group>";
+		};
+		D9577DC9282E5977003E8212 /* LearnWordsAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D9577DCA282E5977003E8212 /* LearnWordsAppUITests.swift */,
+				D9577DCC282E5977003E8212 /* LearnWordsAppUITestsLaunchTests.swift */,
+			);
+			path = LearnWordsAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +123,24 @@
 			productReference = D905CA3C281AB57E00F79161 /* LearnWordsApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D9577DC7282E5977003E8212 /* LearnWordsAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9577DD2282E5977003E8212 /* Build configuration list for PBXNativeTarget "LearnWordsAppUITests" */;
+			buildPhases = (
+				D9577DC4282E5977003E8212 /* Sources */,
+				D9577DC5282E5977003E8212 /* Frameworks */,
+				D9577DC6282E5977003E8212 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9577DCF282E5977003E8212 /* PBXTargetDependency */,
+			);
+			name = LearnWordsAppUITests;
+			productName = LearnWordsAppUITests;
+			productReference = D9577DC8282E5977003E8212 /* LearnWordsAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +153,10 @@
 				TargetAttributes = {
 					D905CA3B281AB57E00F79161 = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					D9577DC7282E5977003E8212 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = D905CA3B281AB57E00F79161;
 					};
 				};
 			};
@@ -116,6 +174,7 @@
 			projectRoot = "";
 			targets = (
 				D905CA3B281AB57E00F79161 /* LearnWordsApp */,
+				D9577DC7282E5977003E8212 /* LearnWordsAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +190,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9577DC6282E5977003E8212 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,12 +205,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				D905CA44281AB57E00F79161 /* ViewController.swift in Sources */,
+				D9577DD4282EA28F003E8212 /* Language.swift in Sources */,
 				D905CA40281AB57E00F79161 /* AppDelegate.swift in Sources */,
 				D905CA42281AB57E00F79161 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9577DC4282E5977003E8212 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9577DCB282E5977003E8212 /* LearnWordsAppUITests.swift in Sources */,
+				D9577DCD282E5977003E8212 /* LearnWordsAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9577DCF282E5977003E8212 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D905CA3B281AB57E00F79161 /* LearnWordsApp */;
+			targetProxy = D9577DCE282E5977003E8212 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D905CA45281AB57E00F79161 /* Main.storyboard */ = {
@@ -336,6 +420,48 @@
 			};
 			name = Release;
 		};
+		D9577DD0282E5977003E8212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = my.LearnWordsAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LearnWordsApp;
+			};
+			name = Debug;
+		};
+		D9577DD1282E5977003E8212 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = my.LearnWordsAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LearnWordsApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -353,6 +479,15 @@
 			buildConfigurations = (
 				D905CA51281AB58000F79161 /* Debug */,
 				D905CA52281AB58000F79161 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9577DD2282E5977003E8212 /* Build configuration list for PBXNativeTarget "LearnWordsAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9577DD0282E5977003E8212 /* Debug */,
+				D9577DD1282E5977003E8212 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

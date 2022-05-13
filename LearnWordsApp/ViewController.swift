@@ -1,22 +1,44 @@
-//
-//  ViewController.swift
-//  LearnWordsApp
-//
-//  Created by Константин Кнор on 28.04.2022.
-//
+
 
 import UIKit
 
+
+let lan = ChooseLanguade.init(sourceLanguageCode: "", targetLanguageCode: "")
+
 class ViewController: UIViewController {
 
+    @IBOutlet weak var languageSenderOutlet: UISegmentedControl!
+    @IBOutlet weak var addButtonOutlet: UIButton!
     @IBOutlet weak var translateSearchBar: UISearchBar!
     @IBOutlet weak var translationResultTeksField: UITextField!
+    
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         translateSearchBar.delegate = self
-    
+        addButtonOutlet.layer.cornerRadius = 10
+        lan.sourceLanguageCode = "en"
+        lan.targetLanguageCode = "ru"
     }
 
+
+    @IBAction func languageSenderAction(_ sender: Any) {
+      
+        switch languageSenderOutlet.selectedSegmentIndex {
+        case 0:
+            lan.sourceLanguageCode = "en"
+            lan.targetLanguageCode = "ru"
+        case 1:
+            lan.sourceLanguageCode = "ru"
+            lan.targetLanguageCode = "en"
+        default: break
+        }
+      
+    }
+    @IBAction func addButtonAction(_ sender: Any) {
+        
+    }
     
 }
 
@@ -26,14 +48,17 @@ extension ViewController:UISearchBarDelegate {
         let url = URL(string: "https://translate.api.cloud.yandex.net/translate/v2/translate")
         guard url != nil else { return print("Error creating url object") }
         var request = URLRequest(url: url!)
-        let header = ["Authorization": "Bearer t1.9euelZqUl8eZjJzGlZKUkM6Zx8fLlO3rnpWakcuLnJPKmJDNk5PHz52cyJjl8_dlSVRs-e88HD1p_N3z9yV4UWz57zwcPWn8.alyQnnuGiFyN1NZLjynuYopS4mQo-alwTjOSE8tGqGWXVmG1ytVgvcyPM-3z-SkFFjRA1VbV_rviOaTOytD9Dg"]
+        let header = ["Authorization": "Bearer t1.9euelZqLyMiLiZqajszInMeJlc-Xl-3rnpWakcuLnJPKmJDNk5PHz52cyJjl8_dJPQds-e8ML1s3_d3z9wlsBGz57wwvWzf9.WplBTcWFPv4h71_gQpjPdJV_B7C1SDr5vJTKUdaSTexERkJArlherrQJ-XxDBdae410l-Pdnm7G0PI4J4P2HDw"]
             request.allHTTPHeaderFields = header
         print(translateSearchBar.text)
+       print(lan.sourceLanguageCode,lan.targetLanguageCode)
         let jsonObject = [
-                    "sourceLanguageCode":"en",
-                    "targetLanguageCode":"ru",
-                    "texts": [translateSearchBar.text!],
-                    "folderId": "b1gd87lkr7j8s0fffk0i"] as [String:Any]
+                        "sourceLanguageCode":"\(lan.sourceLanguageCode)",
+                        "targetLanguageCode":"\(lan.targetLanguageCode)",
+                        "texts": [translateSearchBar.text!],
+                        "folderId": "b1gd87lkr7j8s0fffk0i"] as [String:Any]
+        
+        
         do{
         let requestBody = try JSONSerialization.data(withJSONObject: jsonObject, options: .fragmentsAllowed)
             request.httpBody = requestBody
