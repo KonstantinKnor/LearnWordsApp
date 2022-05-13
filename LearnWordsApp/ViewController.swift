@@ -12,8 +12,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var translateSearchBar: UISearchBar!
     @IBOutlet weak var translationResultTeksField: UITextField!
     
-   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         translateSearchBar.delegate = self
